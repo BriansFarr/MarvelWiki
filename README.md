@@ -1,68 +1,182 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Marvel Wiki
 
-## Available Scripts
+- [Marvel Wiki](#marvel-wiki)
+  - [Project Planning](#project-planning)
+    - [Description](#description)
+    - [Wireframes](#wireframes)
+    - [MVP](#mvp)
+      - [MVP Goals](#mvp-goals)
+      - [MVP API](#mvp-api)
+      - [MVP Libraries & Dependencies](#mvp-libraries--dependencies)
+      - [MVP Components](#mvp-components)
+      - [MVP Breakdown](#mvp-breakdown)
+      - [MVP Timeframes](#mvp-timeframes)
+    - [Post-MVP](#post-mvp)
+  - [Project Delivery](#project-delivery)
+    - [Code Showcase](#code-showcase)
+    - [Code Issues & Resolutions](#code-issues--resolutions)
 
-In the project directory, you can run:
+## Project Planning
 
-### `npm start`
+> The Project Planning section should be completed for your project pitch with instructors.
+>
+> To ensure correct Markdown, I recommend cloning this wiki and copy/pasting the raw template code.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Description
 
-### `npm test`
+_**Project Title** Marvel Wiki
+<br>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Wireframes
 
-### `npm run build`
+> Use the Wireframes section to display desktop, tablet and mobile views.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Home Page](https://wireframe.cc/bwGyln)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- Desktop Landing
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Dummy Link](url)
 
-### `npm run eject`
+- Desktop Body
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![Dummy Link](url)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Desktop Resource Index
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![Dummy Link](url)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Desktop Resource Show
 
-## Learn More
+![Dummy Link](url)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Tablet Resource Index
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Dummy Link](url)
 
-### Code Splitting
+- Mobile Resource Index
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+<br>
 
-### Analyzing the Bundle Size
+### MVP
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+> Marvel Wiki will let users search by comic name, character name, or movie name, returning back info about that search term using Marvel API. 
 
-### Making a Progressive Web App
+_The **Project Title** Marvel Wiki
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+<br>
 
-### Advanced Configuration
+#### MVP Goals
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+- _Make comic, character, and movie names all searchable,_
+- _Return info including cover photos of the search term._
+- _Have seperate pages for books, movies, and characters_
+- _Link between characters and movies/comic from search results._
+- _etc._
 
-### Deployment
+<br>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+#### MVP API
 
-### `npm run build` fails to minify
+> Use the Data Section to define the API(s) you will be consuming for your project, inluding sample URL queries.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+|    API     | Quality Docs? | Documentation | Sample Query                            |
+| :--------: | :-----------: | :------------ | :-------------------------------------- |
+| MarvelAPi |      yes      | _marvel.com_ | _https://gateway.marvel.com:443/v1/public/characters?name=hulk&apikey=7b8c4a6660c0ed6e66f01101cb400d55_ |
+
+Sample Query Results:
+
+
+
+
+<br>
+
+#### MVP Libraries & Dependencies
+
+> Use this section to list the key supporting libraries and their role in the project.
+
+|   Library    | Description                                |
+| :----------: | :----------------------------------------- |
+|    React     | _Library to build the web app upon._ |
+| React Router | _Used to link between components on single page._ |
+
+
+<br>
+
+#### MVP Components
+
+> Use this section to define your React components and the data architecture of your app.
+
+```
+src
+|__ assets/
+      |__ data-tests
+      |__ fonts
+      |__ images
+      |__ wireframes
+|__ components/
+      |__ Header.js
+      |__ nav.js
+      |__ character.js
+      |__ comic.js
+      |__ movie.js
+      |__ search.js
+```
+
+<br>
+
+#### MVP Breakdown
+
+> Use this section to go into further depth regarding every component, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
+
+|  Component   |    Type    | state | props | hooks | Description                                |
+| :----------: | :--------: | :---: | :---: | :---: | :----------------------------------------- |
+|    App.js    |   class    |   y   |   n   |   n   | _Will make api call._ |
+| Navigation    | functional |   n   |   n   |   n   | _Displays nav, links to comic, character,movie._ |
+|     Home     | functional |   n   |   n   |   y   | _Displays home page_ |
+|    Index     | functional |   n   |   n   |   y   | _Runs App component._ |
+|    Detail    | functional |   n   |   n   |   y   | _Displays selected details._ |
+|   Gallery    |   class    |   y   |   n   |   y   | _Displays comic/movie/character._ |
+|    Footer    | functional |   n   |   n   |   n   | _Links back to APi for credit_ |
+
+<br>
+
+#### MVP Timeframes
+
+> Use this section to estimate the time necessary to build out each of the components you've described above. 
+>
+> Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evalute possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe.
+
+| Task             | Priority | Estimated Time | Time Invested | Actual Time |
+| ---------------- | :------: | :------------: | :-----------: | :---------: |
+| Fetch APi |   H    |     3 hrs      |     2 hrs     |    3 hrs    |
+| build out components     |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| create onClick events     |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| css styling     |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| post MVP     |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| TOTAL            |          |     6 hrs      |     3 hrs     |     TBD     |
+
+<br>
+
+### Post-MVP
+
+> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+
+- Connect youtube api to display trailers.
+
+<br>
+
+***
+
+## Project Delivery
+
+> The Project Delivery section should be completed as your work on your project.
+
+### Code Showcase
+
+> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+
+### Code Issues & Resolutions
+
+> Use this section to list of all major issues encountered and their resolution, if you'd like.
