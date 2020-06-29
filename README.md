@@ -33,29 +33,19 @@ _**Project Title** Marvel Wiki
 
 > Use the Wireframes section to display desktop, tablet and mobile views.
 
-![Home Page](https://wireframe.cc/bwGyln)
+![Details]("https://wireframe.cc/qWzzLu")
 
-- Desktop Landing
+- Details component
 
-![Dummy Link](url)
+![Results Page]('https://wireframe.cc/Npoecq')
 
 - Desktop Body
 
-![Dummy Link](url)
+![Home Page](https://wireframe.cc/J57KDa))
 
-- Desktop Resource Index
+- Home Page
 
-![Dummy Link](url)
 
-- Desktop Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
 
 <br>
 
