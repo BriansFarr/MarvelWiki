@@ -18,30 +18,26 @@
 
 ## Project Planning
 
-> The Project Planning section should be completed for your project pitch with instructors.
->
-> To ensure correct Markdown, I recommend cloning this wiki and copy/pasting the raw template code.
-
 <br>
 
 ### Description
 
-_**Project Title** Marvel Wiki
+**Project Title** Marvel Wiki
 <br>
 
 ### Wireframes
 
 > Use the Wireframes section to display desktop, tablet and mobile views.
 
-![Details]("https://wireframe.cc/qWzzLu")
+![Details](https://wireframe.cc/qWzzLu)
 
 - Details component
 
-![Results Page]('https://wireframe.cc/Npoecq')
+![Results Page](https://wireframe.cc/Npoecq)
 
 - Desktop Body
 
-![Home Page](https://wireframe.cc/J57KDa))
+![Home Page](https://wireframe.cc/J57KDa)
 
 - Home Page
 
@@ -51,18 +47,17 @@ _**Project Title** Marvel Wiki
 
 ### MVP
 
-> Marvel Wiki will let users search by comic name, character name, or movie name, returning back info about that search term using Marvel API. 
+> Marvel Wiki is a web application that will allow users to search through all their favorite heroes and browse though new ones. By entering the name of a heros in the search bar a details page will allow users to view different comic and movies that their hero has appeared in. User may then click on the container of the comic book/movie and get further details. 
 
 _The **Project Title** Marvel Wiki
 
 <br>
 
 #### MVP Goals
-
-- _Make comic, character, and movie names all searchable,_
-- _Return info including cover photos of the search term._
-- _Have seperate pages for books, movies, and characters_
-- _Link between characters and movies/comic from search results._
+- _Form accepting heroes names and saving user term to state._
+- _API call to Marvel open data._
+- _Details Component_
+- _Link between heroes/details pages._
 - _etc._
 
 <br>
