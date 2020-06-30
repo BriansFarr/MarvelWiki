@@ -27,17 +27,17 @@
 
 ### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views.
 
-![Details](https://wireframe.cc/qWzzLu)
+
+[Details](https://wireframe.cc/qWzzLu)
 
 - Details component
 
-![Results Page](https://wireframe.cc/Npoecq)
+[Results Page](https://wireframe.cc/Npoecq)
 
 - Desktop Body
 
-![Home Page](https://wireframe.cc/J57KDa)
+[Home Page](https://wireframe.cc/J57KDa)
 
 - Home Page
 
@@ -49,7 +49,7 @@
 
 > Marvel Wiki is a web application that will allow users to search through all their favorite heroes and browse though new ones. By entering the name of a heros in the search bar a details page will allow users to view different comic and movies that their hero has appeared in. User may then click on the container of the comic book/movie and get further details. 
 
-_The **Project Title** Marvel Wiki
+_The **Marvel Wiki** 
 
 <br>
 
@@ -72,8 +72,27 @@ _The **Project Title** Marvel Wiki
 
 Sample Query Results:
 
+[Json Example](https://imgur.com/a/OhFwa0B)
 
+
+```
+
+const getHeroes = async () => {
+    const response = await fetch(`https://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${pubKey}&hash=${md5Hash}`)
+    const data = await response.json();
+    console.log(data.data.results[0])
+    setNames(data.data.results[0])
+    
+   
+
+<<<<<<< HEAD
 =
+=======
+
+  }
+
+```
+>>>>>>> f4ee05be306b32b9a98d0587ca826dc35be31661
 
 <br>
 
@@ -113,7 +132,7 @@ src
 
 #### MVP Breakdown
 
-> Use this section to go into further depth regarding every component, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
+
 
 |  Component   |    Type    | state | props | hooks | Description                                |
 | :----------: | :--------: | :---: | :---: | :---: | :----------------------------------------- |
@@ -129,24 +148,21 @@ src
 
 #### MVP Timeframes
 
-> Use this section to estimate the time necessary to build out each of the components you've described above. 
->
-> Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evalute possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe.
 
 | Task             | Priority | Estimated Time | Time Invested | Actual Time |
 | ---------------- | :------: | :------------: | :-----------: | :---------: |
-| Fetch APi |   H    |     3 hrs      |     2 hrs     |    3 hrs    |
-| build out components     |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| create onClick events     |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| css styling     |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| post MVP     |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL            |          |     6 hrs      |     3 hrs     |     TBD     |
+| Fetch APi |   H    |     1 hrs      |     2 hrs     |    3 hrs    |
+| build out components     |    H     |     5 hrs      |     1 hrs     |     TBD     |
+| create onClick events     |    H     |     2 hrs      |     1 hrs     |     TBD     |
+| css styling     |    H     |     12 hrs      |      hrs     |     TBD     |
+| post MVP     |    H     |     10 hrs      |      hrs     |     TBD     |
+| TOTAL            |          |     31 hrs      |     3 hrs     |     TBD     |
 
 <br>
 
 ### Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+
 
 - Connect youtube api to display trailers.
 
