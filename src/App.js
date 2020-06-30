@@ -1,5 +1,8 @@
-import './App.css';
+
 import React, { useState, useEffect } from 'react';
+import Heroes from './Heroes';
+import md5 from 'md5';
+
 
 
 // data.results.title
@@ -7,33 +10,62 @@ import React, { useState, useEffect } from 'react';
 
 const App = () => {
   
-  const pubKey = "001ac6c73378bbfff488a36141458af2";
-  //const privKey = "1ccf7656fa1a7c5e72470bb94658a746e15edd8d";
-  const ts = "thesoer";
-  const md5Hash = "72e5ed53d1398abb831c3ceec263f18b"
+  const pubKey = "7b8c4a6660c0ed6e66f01101cb400d55";
+  const privKey = "1ccf7656fa1a7c5e72470bb94658a746e15edd8d";
+  const ts = Number(new Date());
+  const hash = md5(ts + privKey + pubKey);
 
 
-  useEffect(() => { getHeroes() }, []);
-  
+  const [hero, setHero] = useState([]);
+  const [search, setSearch] = useState('');
+
+  const [query, setQuery] = useState('hulk');
+  //const hero = "hulk";
+
+  useEffect(() => { getHeroes() }, [query] );
+
   const getHeroes = async () => {
-    const response = await fetch(`https://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${pubKey}&hash=${md5Hash}`)
-    const data = await response.json();
-    console.log(data.data.results)
-   
+  
+    const response = await fetch(`https://gateway.marvel.com/v1/public/characters?name=${query}&ts=${ts}&apikey=${pubKey}&hash=${hash}`)
+    const res = await response.json();
+    //console.log(res.data.results[0]);
+    const results = res.data.results;
+    setHero(results)
+    console.log(results)
+  
+    
 
+  }
 
+  const updateSearch = e => {
+    setSearch(e.target.value);
+    
+  }
+
+  const getSearch = e => {
+    e.preventDefault();
+    setQuery(search);
+    setSearch('');
+    
   }
 
   return (
     <div className="APP">
-      <form className='search-form'>
-        <input className='search-bar' type='text' />
-        <button className="search-button" type='submit'>
-          Search
-        </button>
+      <h1>Marvel Heroes and Villians Wiki</h1>
+
+      <form  onSubmit = {getSearch} className = "search-form">
+        <input className="search-bar" type="text" value={search} onChange={updateSearch}/>
+      <button  className="search-button" type="submit">search</button>
       </form>
+      {hero.map(heros => (
+        <Heroes key={heros.id} name={heros.name} description={heros.description} image={heros.thumbnail.path}  />
+      ))}
+      
+     
+    
+
     </div>
-  );
  
-};
+  )
+}
 export default App
