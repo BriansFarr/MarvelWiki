@@ -2,6 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import Heroes from './Heroes';
 import md5 from 'md5';
+import './App.css';
+import Nav from "./nav"
+import Header from './Header';
 
 
 
@@ -19,7 +22,7 @@ const App = () => {
   const [hero, setHero] = useState([]);
   const [search, setSearch] = useState('');
 
-  const [query, setQuery] = useState('hulk');
+  const [query, setQuery] = useState('captain marvel ');
   //const hero = "hulk";
 
   useEffect(() => { getHeroes() }, [query] );
@@ -51,7 +54,9 @@ const App = () => {
 
   return (
     <div className="APP">
-      <h1>Marvel Heroes and Villians Wiki</h1>
+  
+
+      <p>Search Here</p>
 
       <form  onSubmit = {getSearch} className = "search-form">
         <input className="search-bar" type="text" value={search} onChange={updateSearch}/>
@@ -60,9 +65,6 @@ const App = () => {
       {hero.map(heros => (
         <Heroes key={heros.id} name={heros.name} description={heros.description} image={heros.thumbnail.path}  />
       ))}
-      
-     
-    
 
     </div>
  
