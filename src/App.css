@@ -1,5 +1,6 @@
-.App {
+.Search {
   text-align: center;
+  display: flex;
 }
 
 nav{
@@ -7,7 +8,7 @@ nav{
   justify-content: space-around;
   align-items: center;
   min-height: 100px;
-  background: blue;
+  background: #f0131e;
   color: white;
   
 
@@ -23,12 +24,19 @@ nav{
 }
 
 .Header{
-  background-color: black;
+  background-color:
 }
 
 .Home{
-  background-color: aqua;
+  background-color: #2b3784;
   text-align: center;
+  display: flex;
+  flex-direction: column;
   
 }
 
+.Footer{
+
+
+
+}

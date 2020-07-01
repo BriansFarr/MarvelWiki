@@ -3,15 +3,13 @@ import React, { useState, useEffect } from 'react';
 import Heroes from './Heroes';
 import md5 from 'md5';
 import './App.css';
-import Nav from "./nav"
-import Header from './Header';
 
 
 
 // data.results.title
 
 
-const App = () => {
+const Search = () => {
   
   const pubKey = "7b8c4a6660c0ed6e66f01101cb400d55";
   const privKey = "1ccf7656fa1a7c5e72470bb94658a746e15edd8d";
@@ -70,4 +68,4 @@ const App = () => {
  
   )
 }
-export default App
+export default Search

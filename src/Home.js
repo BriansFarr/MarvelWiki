@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './Header'
 import Nav from "./nav"
-import App from "./App"
+import Search from "./Search"
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Comics from './Comics'
 import About from './About'
@@ -16,7 +16,7 @@ function Home() {
       <Header />
         <Nav />
         <Switch>
-          <Route exact path="/App" component={App} />
+          <Route exact path="/App" component={Search} />
           <Route path="/Comics" component={Comics} />
           <Route path="/About" component={About}/>
           </Switch>
