@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Comics from './Comics'
+import MarvelNav from "./MarvelNav.png"
+
 function Nav() {
   return (
     <nav>
-      <h1>logo</h1>
+      <img src={MarvelNav}/>
       <ul className="nav-Links">
         <Link to="/">
           <li>Home</li>

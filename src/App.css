@@ -5,9 +5,8 @@
 
 nav{
   display: flex;
-  justify-content: space-around;
+
   align-items: center;
-  min-height: 100px;
   background: #f0131e;
   color: white;
   
@@ -23,9 +22,7 @@ nav{
 
 }
 
-.Header{
-  background-color:
-}
+
 
 .Home{
   background-color: #2b3784;
@@ -36,7 +33,7 @@ nav{
 }
 
 .Footer{
-
-
+  position: absolute;
+  bottom: 0;
 
 }

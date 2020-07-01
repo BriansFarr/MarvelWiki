@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react'
 
-const Comics = ({ comics, movies }) => {
-  return (
-    <div>
-      <h1>comics</h1>
-    </div>
-  )
+export default class Comics extends Component {
+  render() {
+    return (
+      <div>
+        
+      </div>
+    )
+  }
 }
-
-export default Comics

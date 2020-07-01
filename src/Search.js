@@ -6,6 +6,7 @@ import './App.css';
 
 
 
+
 // data.results.title
 
 
@@ -20,14 +21,14 @@ const Search = () => {
   const [hero, setHero] = useState([]);
   const [search, setSearch] = useState('');
 
-  const [query, setQuery] = useState('captain marvel ');
+  const [query, setQuery] = useState('captain America');
   //const hero = "hulk";
 
   useEffect(() => { getHeroes() }, [query] );
 
   const getHeroes = async () => {
   
-    const response = await fetch(`https://gateway.marvel.com/v1/public/characters?name=${query}&ts=${ts}&apikey=${pubKey}&hash=${hash}`)
+    const response = await fetch(`https://gateway.marvel.com/v1/public/characters?nameStartsWith=${query}&ts=${ts}&apikey=${pubKey}&hash=${hash}`)
     const res = await response.json();
     //console.log(res.data.results[0]);
     const results = res.data.results;
@@ -61,7 +62,8 @@ const Search = () => {
       <button  className="search-button" type="submit">search</button>
       </form>
       {hero.map(heros => (
-        <Heroes key={heros.id} name={heros.name} description={heros.description} image={heros.thumbnail.path}  />
+        <Heroes key={heros.id} name={heros.name} description={heros.description} image={heros.thumbnail.path} />
+        
       ))}
 
     </div>

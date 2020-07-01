@@ -3,9 +3,9 @@ import './App.css';
 
 export default function Header() {
   return (
-    <div>
+    <h1>
       Marvel Heroes and Villians Wiki!
       
-    </div>
+    </h1>
   )
 }
