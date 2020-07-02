@@ -25,6 +25,7 @@ const Search = () => {
   //const hero = "hulk";
 
   useEffect(() => { getHeroes() }, [query] );
+  
 
   const getHeroes = async () => {
   
@@ -61,6 +62,7 @@ const Search = () => {
         <input className="search-bar" type="text" value={search} onChange={updateSearch}/>
       <button  className="search-button" type="submit">search</button>
       </form>
+      
       {hero.map(heros => (
         <Heroes key={heros.id} name={heros.name} description={heros.description} image={heros.thumbnail.path} />
         

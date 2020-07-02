@@ -16,8 +16,7 @@ nav{
 .nav-Links {
   width: 50%;
   display: flex;
-  justify-content: space-between;
-  
+  justify-content: space-between;  
   
 
 }
@@ -37,3 +36,21 @@ nav{
   bottom: 0;
 
 }
+
+.comicContainer{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+  .comicList{
+  height: auto;
+  width: 200px;
+  background-color: white;
+  margin: 5px 0px;
+  
+  
+  
+  }
+

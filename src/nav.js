@@ -5,11 +5,11 @@ import MarvelNav from "./MarvelNav.png"
 function Nav() {
   return (
     <nav>
-      <img src={MarvelNav}/>
-      <ul className="nav-Links">
-        <Link to="/">
-          <li>Home</li>
+       <Link to="/">
+         <li><img src={MarvelNav}/></li>
         </Link>
+      <ul className="nav-Links">
+       
         < Link to="/about">
           <li>About</li>
         </Link>
