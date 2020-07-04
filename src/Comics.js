@@ -1,6 +1,7 @@
 
 import React, { Component} from 'react';
 import md5 from "md5"
+import Router, { Link } from 'react-router-dom';
  
 
 class Comics extends Component {
@@ -39,15 +40,18 @@ class Comics extends Component {
   render() {
     let { comics } = this.state
     console.log(comics)
-  return(
+    return (
+      <>
+    <h1>Latest Marvel Comics:</h1>
     <div className="comicContainer">
      {comics.map(comic => (
        <div className="comicList">
-         {comic.title}
+         {comic.title} 
        
         </div>
       ))}
-   </div>
+        </div>
+        </>
   )}
 }
  
