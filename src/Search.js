@@ -64,7 +64,8 @@ const Search = () => {
       </form>
       
       {hero.map(heros => (
-        <Heroes key={heros.id} name={heros.name} description={heros.description} image={heros.thumbnail.path} />
+        <Heroes key={heros.id} name={heros.name} description={heros.description} image={heros.thumbnail.path}
+          link={heros.resourceURI}/>
         
       ))}
 

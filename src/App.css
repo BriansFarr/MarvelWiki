@@ -1,14 +1,20 @@
 .Search {
-  text-align: center;
   display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color: white;
 }
 
 nav{
   display: flex;
-
+  height: 50%;
+  width: auto;
   align-items: center;
   background: #f0131e;
-  color: white;
+  list-style-type: none;
+  border: #2b3784;
+  border-radius: 10%;
   
 
 }
@@ -17,6 +23,9 @@ nav{
   width: 50%;
   display: flex;
   justify-content: space-between;  
+  display: flex;
+  list-style-type: none;
+  font-family: 'Marvel', sans-serif;
   
 
 }
@@ -28,6 +37,7 @@ nav{
   text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   
 }
 
@@ -38,19 +48,41 @@ nav{
 }
 
 .comicContainer{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
 
 }
-  .comicList{
+.comicList{
   height: auto;
   width: 200px;
   background-color: white;
   margin: 5px 0px;
   
-  
-  
+
   }
 
+.herosContainer{
+  height: auto;
+  width: auto;
+  background-color: white;
+  margin: 5px 0px;
+  flex-wrap: wrap;
+ 
+  
+}
+
+.heroes{
+  height: auto;
+  width: auto;
+  background-color: white;
+  margin: 5px 0px;
+  display: flex;
+  justify-content: ;
+ 
+}
+.Footer{
+  display: flex;
+  justify-content: center;
+}

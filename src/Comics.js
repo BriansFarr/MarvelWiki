@@ -46,7 +46,8 @@ class Comics extends Component {
     <div className="comicContainer">
      {comics.map(comic => (
        <div className="comicList">
-         {comic.title} 
+         <h1>{comic.title}</h1> <img src={comic.thumbnail.path + "/portrait_xlarge.jpg"} alt="Cover" />
+         <p>{comic.creators.items[0].name}</p>
        
         </div>
       ))}

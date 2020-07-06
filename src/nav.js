@@ -6,7 +6,7 @@ function Nav() {
   return (
     <nav>
        <Link to="/">
-         <li><img src={MarvelNav}/></li>
+         <li><img src={MarvelNav} alt= "logo"/></li>
         </Link>
       <ul className="nav-Links">
        

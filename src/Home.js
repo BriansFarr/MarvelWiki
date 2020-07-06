@@ -27,7 +27,14 @@ function Home(props) {
             
           </div>
         </Router>
-      
+        <h1>Welcome to Marvels Heroes and Villians Wiki</h1>
+        <br>
+        </br>
+        <p>Check out the latest Marvel Comics on the Comics Page!</p>
+        <br></br>
+        <p>Search your favorite hero or villian on our search page.</p>
+        <br>
+        </br>
        <Footer />   
       </>
     )
