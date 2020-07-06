@@ -1,7 +1,7 @@
 
 import React, { Component} from 'react';
 import md5 from "md5"
-import Router, { Link } from 'react-router-dom';
+
  
 
 class Comics extends Component {
@@ -24,7 +24,6 @@ class Comics extends Component {
   
       const response = await fetch(`https://gateway.marvel.com:443/v1/public/comics?dateDescriptor=thisMonth&orderBy=-issueNumber&ts=${ts}&apikey=${pubKey}&hash=${hash}`)
       const res = await response.json();
-      //console.log(res.data.results[0]);
       const results = res.data.results;
       this.setState({ comics:results })
       console.log(results)
